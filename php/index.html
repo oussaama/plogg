@@ -1,0 +1,139 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Form</title>
+    <link rel="icon" href="assets/img/raw.png">
+    <link href="https://unpkg.com/gijgo@1.9.11/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        crossorigin="anonymous">
+    <!-- Confirm CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/vendors/confirm/css/jquery-confirm.css" />
+    <!-- Style global css -->
+    <link rel="stylesheet" type="text/css" href="assets/style.css" />
+    <!-- font Awesome css -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="s"
+        crossorigin="anonymous">
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+
+<body class="bg-light">
+    <div class="container">
+        <div class="py-5">
+            <div class="jumbotron">
+                <div class="row">
+                    <div class="col-12 ">
+                        <div class="mt-6 text-center">
+                            <img class="mb-4 logo-application" src="assets/img/raw.png" alt="" width="72" height="72">
+                            <span class="title-application">TEST PHP</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p class="lead ml-4 mr-4">
+                            The baseline parameter should control the amount of randomness in the distribution of values
+                            throughout
+                            the given dates and it should be given as an integer from 0 to 100. It should also guarantee
+                            a
+                            minimum
+                            value per
+                            date. The baseline indicates the amount of randomness allowed in the distribution. This
+                            method can
+                            have
+                            several
+                            approaches depending on the algorithm used, so the actual value resulting of the baseline is
+                            open to
+                            interpretation. In
+                            the following examples we use it as the percentage of the total, divided amongst the total
+                            of days
+                            that
+                            have non-zero
+                            values (weekdays).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="needs-validation" novalidate="" id="application" name="application" action=""
+                            method="">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="baseline">Baseline</label>
+                                    <input type="number" class="form-control" id="baseline" name="baseline"
+                                        placeholder="number between 1 and 100" value="" min="1" max="100" required="">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="total">Total</label>
+                                    <input type="number" class="form-control" id="total" name="total"
+                                        placeholder="enter positive number" value="" min="1" required="">
+
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="startDate">Start Date</label>
+                                    <input type="text" class="form-control" id="startDate" name="startDate"
+                                        placeholder="start date" required="">
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="endDate">End Date</label>
+                                    <input type="text" class="form-control" id="endDate" name="endDate"
+                                        placeholder="end date" required="">
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                            </div>
+                            <div class="mt-5"></div>
+                            <div class="result-modal">
+                                <h1 class="mb-3 text-center text-danger">RESULT</h1>
+                                <table class="table table-hover table-striped">
+                                    <thead class="bg-danger">
+                                        <tr class="">
+                                            <th scope="col" class="text-white">#</th>
+                                            <th scope="col" class="text-white">Date</th>
+                                            <th scope="col" class="text-white">Value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="result-random">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row">
+                                <hr class="mb-4">
+                                <button class="btn btn-danger btn-lg btn-block" type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Jquery JS-->
+        <script type="text/javascript" src="assets/vendors/jquery/jquery.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script type="text/javascript" src="assets/vendors/bootstrap/js/bootstrap.min.js"></script>
+        <!-- Confirm JS -->
+        <script type="text/javascript" src="assets/vendors/confirm/js/jquery-confirm.js"></script>
+        <!-- traitement de page JS -->
+        <script type="text/javascript" src="assets/main.js"></script>
+
+        <script type="text/javascript" src="https://unpkg.com/gijgo@1.9.11/js/gijgo.min.js"></script>
+        <script>
+            $('#startDate').datepicker({
+                uiLibrary: 'bootstrap4',
+            });
+            $('#endDate').datepicker({
+                uiLibrary: 'bootstrap4'
+            });
+        </script>
+</body>
+
+</html>
